@@ -1,0 +1,95 @@
+Testing scanned cube state...
+
+=== Test 1: Color Counts ===
+Color counts: { green: 9, orange: 9, white: 9, red: 9, yellow: 9, blue: 9 }
+All colors have 9 stickers: Ô£ô PASS
+
+=== Test 2: Normal Solve (validation enabled) ===
+solveCubeWithAlgorithm called with force=false
+Running validation...
+Validation failed: Impossible edge piece found with opposite colors: green and blue.
+Solvable: false
+Message: Impossible edge piece found with opposite colors: green and blue.
+Steps count: 0
+Validation info: {
+  colorCounts: {
+    white: 9,
+    yellow: 9,
+    green: 9,
+    blue: 9,
+    red: 9,
+    orange: 9,
+    gray: 0
+  }
+}
+
+=== Test 3: Force Solve ===
+solveCubeWithAlgorithm called with force=true
+Skipping validation (force=true)
+=== Solver start ===
+Initializing variables...
+Variables initialized.
+Cube string parsed successfully.
+Building move tables...
+Initializing move tables...
+C_Move progress: 0/2187
+C_Move progress: 500/2187
+C_Move progress: 1000/2187
+C_Move progress: 1500/2187
+C_Move progress: 2000/2187
+C_Move table built
+E_Move progress: 0/2048
+E_Move progress: 500/2048
+E_Move progress: 1000/2048
+E_Move progress: 1500/2048
+E_Move progress: 2000/2048
+E_Move table built
+P_Move progress: 0/495
+P_Move progress: 100/495
+P_Move progress: 200/495
+P_Move progress: 300/495
+P_Move progress: 400/495
+P_Move table built
+Computing pruning tables...
+C_Prun progress: 0/2187
+C_Prun progress: 500/2187
+C_Prun progress: 1000/2187
+C_Prun progress: 1500/2187
+C_Prun progress: 2000/2187
+C_Prun built
+E_Prun progress: 0/2048
+E_Prun progress: 500/2048
+E_Prun progress: 1000/2048
+E_Prun progress: 1500/2048
+E_Prun progress: 2000/2048
+E_Prun built
+P_Prun progress: 0/495
+P_Prun progress: 100/495
+P_Prun progress: 200/495
+P_Prun progress: 300/495
+P_Prun progress: 400/495
+P_Prun built
+Move tables built.
+--- Phase 1 start ---
+Phase 1 depth 0
+Phase 1 depth 1
+search1 crash imminent: c=7991766, e=415, i=0
+C_Move[c]=undefined, E_Move[e]=799,799,799,439,439,439,415,415,7,2047,2047,2047,2047,2047,2047,7,7,7
+Solvable: false
+Solver crashed: TypeError: Cannot read properties of undefined (reading '0')
+    at search1 (D:\Documents\Workspace\gemini\rubix-cube-solver\services\algorithmicSolver.ts:235:27)
+    at solve (D:\Documents\Workspace\gemini\rubix-cube-solver\services\algorithmicSolver.ts:310:13)
+    at solveCubeWithAlgorithm (D:\Documents\Workspace\gemini\rubix-cube-solver\services\algorithmicSolver.ts:424:28)
+    at D:\Documents\Workspace\gemini\rubix-cube-solver\verify-scanned-cube.ts:102:21
+    at ViteNodeRunner.runModule (file:///C:/Users/izaqu/AppData/Local/npm-cache/_npx/f2342a4b64a2bc92/node_modules/vite-node/dist/client-CyS7w_FB.mjs:369:4)
+    at ViteNodeRunner.directRequest (file:///C:/Users/izaqu/AppData/Local/npm-cache/_npx/f2342a4b64a2bc92/node_modules/vite-node/dist/client-CyS7w_FB.mjs:349:3)
+    at ViteNodeRunner.cachedRequest (file:///C:/Users/izaqu/AppData/Local/npm-cache/_npx/f2342a4b64a2bc92/node_modules/vite-node/dist/client-CyS7w_FB.mjs:182:11)
+Message: Solver crashed - Cannot read properties of undefined (reading '0')
+Steps count: 0
+
+=== Summary ===
+Color counts valid: Ô£ô
+Normal solve: Ô£ù FAILED
+Force solve: Ô£ù FAILED
+    at ViteNodeRunner.executeFile (file:///C:/Users/izaqu/AppData/Local/npm-cache/_npx/f2342a4b64a2bc92/node_modules/vite-node/dist/client-CyS7w_FB.mjs:157:10)
+    at CAC.run (file:///C:/Users/izaqu/AppData/Local/npm-cache/_npx/f2342a4b64a2bc92/node_modules/vite-node/dist/cli.mjs:95:28)
